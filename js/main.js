@@ -9,7 +9,7 @@ elementButtonGen.addEventListener("click", function(){
     //in caso contrario andare avanti con il programma e calcolare il prezzo
     if(isNaN(km)){
 
-        alert("Dati inseriti non corretti, riprovare.")
+        alert("Dati inseriti non corretti, riprovare.");
 
     }else{
 
@@ -20,12 +20,20 @@ elementButtonGen.addEventListener("click", function(){
         } else if(eta == "over 65"){
 
             prezzo *= 0.6;
-            
+
         }
     }
 
     prezzo = prezzo.toFixed(2)
     document.getElementById("username").innerHTML = user;
     document.getElementById("prezzo").innerHTML = prezzo +"€";
+})
+
+const elementButtonNull = document.getElementById("buttonNull");
+
+elementButtonNull.addEventListener("click", function(){
+    document.getElementById("user").value = "";
+    document.getElementById("km").value = "";
+    document.getElementById("eta").value = "maggiorenne";
 })
 
